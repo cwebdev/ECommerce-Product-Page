@@ -1,4 +1,4 @@
-# Agency landing page (PSD to HTML)
+# E-commerce Product Page (PSD to HTML)
 
 This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). 
 
