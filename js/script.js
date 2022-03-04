@@ -1,77 +1,47 @@
-let navMenuElems = document.querySelectorAll('.navMenuElem');
-
-for(var i = 0; i < navMenuElems.length;i++)
-{
-    navMenuElems[i].onclick = function(e) {        
-        if(this.classList.contains('collapsed') == false)
-        {
-            for(var i = 0; i < navMenuElems.length;i++)
-            {
-                if(this != navMenuElems[i])
-                    navMenuElems[i].classList.remove('collapsed');
-            }
-            this.classList.add('collapsed');            
-        }
-        else
-        {
-            this.classList.remove('collapsed');            
-        }
-        e.stopPropagation();
-    };
-}
-
-document.body.onclick = function(e)
-{
-    for(var i = 0; i < navMenuElems.length;i++)
-        navMenuElems[i].classList.remove('collapsed');
-}
-
-
-var icon = document.querySelector('.burgerIconWrapper');
-icon.onclick = function()
-{    
-    var x = document.querySelector('.dropdownMenuWrapper');    
-    var burgerIcon = document.querySelector('.burgerIcon');
-    if (x.style.display === "none" || x.style.display === '')
-    {
-        burgerIcon.classList.add('collapsed');
-        x.style.display = "block";
+function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+  
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+  
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+
+
+// Code for cart details popup
+let cartImgBtn = document.querySelector(".cartImageElemWrapper img");
+cartImgBtn.onclick = function(e) {
+    let cartDetailsPopup = document.querySelector(".cartDetailsPopup");
+    if(cartDetailsPopup.style.display != 'block')
+        cartDetailsPopup.style.display = 'block';
     else
-    {
-        burgerIcon.classList.remove('collapsed');
-        x.style.display = "none";
-    }
+        cartDetailsPopup.style.display = 'none';
 }
-
-
-var menuItems = document.querySelectorAll('.dropdownMenuCollapseItem');
-for(var i = 0; i < menuItems.length;i++)
-{
-    menuItems[i].onclick = function()
-    {
-        var allMenuItems = document.querySelectorAll('.dropdownMenuCollapseItem');
-        for(var j = 0; j < allMenuItems.length;j++)
-        {
-            if(allMenuItems[j] != this)
-            {
-                allMenuItems[j].classList.remove('collapsed');
-                allMenuItems[j].children[2].style.display = "none";
-            }
-        }
-
-        var x = this.children[2];        
-        if (x.style.display === "none" || x.style.display === '')
-        {
-            this.classList.add('collapsed');
-            x.style.display = "block";
-        }
-        else
-        {
-            this.classList.remove('collapsed');
-            x.style.display = "none";
-        }
-    }
-}
-
-
