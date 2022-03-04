@@ -47,13 +47,170 @@ body
 {
     width: 100px;
     height: 100px;
+}
+
+.cartDetailsPopup
+{
+    height: 200px;
+    width:300px;
+    margin-left: -100px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-top: none;
+    border-radius: 10px;
+    z-index: 10;
+    display: none;
+}
+
+.cartDetailsTitle
+{
+    padding-top:15px;
+    padding-left:5%;
+    height: 30px;
+    width: 95%;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+
+.dividerLineInCartDetails
+{
+    height:0px;
+    border-top:2px solid #efeff1;
+    padding:0px;
+    width:300px;
+    margin:auto;
+}
+
+.productDetailsInCart
+{
+    width: 300px;
+    height: 60px;
+    z-index: 10;
     display: flex;
     align-items: center;
 }
 
-.menuCartBtnWrapper img
+.productThumbnailInCart
+{
+    width: 70px;
+    height:60px;
+    display: flex;
+    align-items: center;
+}
+
+.productThumbnailInCart img
+{
+    width:40px;
+    height: 40px;
+    margin:auto;
+    border-radius: 10px;
+}
+
+.productDetailsWrapper
+{
+    height: 60px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+}
+
+.productDetailsTextWrapper
+{
+    display: flex;
+    align-items: end;
+    width: 180px;
+    height: 30px;
+}
+
+.productDetailsText
+{
+    font-size: 12px;
+}
+
+.productTotalTextWrapper
+{
+    width:180px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.productTotalText
+{
+    font-size: 12px;
+}
+
+.boldText
+{
+    font-weight: bold;
+}
+
+.removeProductWrapper
+{
+    display: flex;
+    align-items: center;
+    width:50px;
+    height: 60px;
+}
+
+.removeProductWrapper img
+{
+    height: 16px;
+    width: 14px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+.checkoutBtnWrapper
+{
+    height: 80px;
+    width:100%;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.checkoutBtn
+{
+    background-color: hsl(26, 100%, 55%);
+    height:50px;
+    margin: auto;
+    width: 80%;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkoutBtn .btnTitle
 {
     margin: auto;
+}
+
+.cartImageElemWrapper
+{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.cartImageElemWrapper img
+{
+    margin: auto;
+    cursor: pointer;
 }
 
 .profileBtnWrapper
@@ -399,6 +556,7 @@ body
 {
     position: relative;
     height: 850px;
+    z-index: 1;
 }
 
 .standoutTextBlockWrapper
@@ -813,7 +971,7 @@ margin-left: 50px;}
     }
 
     .mainNavMenuWrapper .btnWrapper {width:100px;margin-left:20px}
-    .navListWrapper {width:20%; display: flex; flex-wrap: nowrap;justify-content:space-evenly;}    
+    .navListWrapper {width:20%; display: flex; flex-wrap: nowrap;justify-content:right;}    
     .btnWrapper {display: flex;flex-direction: column;justify-content: center;}    
 
     .sectionTitle{margin-top: 60px;font-size: 24px;}
@@ -832,8 +990,10 @@ margin-left: 50px;}
     .ImgThumbnailElem {height:75px; width:75px; margin:auto;position: relative;cursor: pointer;}
     .ImgThumbnailElem.selectedElem img {border: 2px solid orange;}
     .ImgThumbnailElem .overlay {display: none;}
-    .ImgThumbnailElem.selectedElem .overlay {display: block; background-color: white; opacity: 0.5;
+    .ImgThumbnailElem.selectedElem .overlay, .ImgThumbnailElem:hover .overlay {display: block; background-color: white; opacity: 0.5;
         width:100%; height: 100%;position: absolute;top:0px;left:0px}
+
+        
     .ImgThumbnailElem img {height: 100%;width: 100%;border-radius: 15px;}
     .standoutTextBlockWrapper {width:100%;top:0px;right:0px; height:400px;padding-top:0px}
     .standoutTextBlockWrapper
