@@ -45,3 +45,24 @@ cartImgBtn.onclick = function(e) {
     else
         cartDetailsPopup.style.display = 'none';
 }
+
+
+// Code for quantity
+let plusBtn = document.querySelector('.PlusBtn');
+plusBtn.onclick = function(e) {
+  let quantityValElem = document.querySelector('.QuantityValue');
+  let quantityVal = parseInt(quantityValElem.innerHTML);
+  // Putting an upper limit of 100
+  if(quantityVal < 100)
+    quantityVal++;
+  quantityValElem.innerHTML = quantityVal;
+}
+
+let negBtn = document.querySelector('.NegBtn');
+negBtn.onclick = function(e) {
+  let quantityValElem = document.querySelector('.QuantityValue');
+  let quantityVal = parseInt(quantityValElem.innerHTML);
+  if(quantityVal > 0)
+    quantityVal--;
+  quantityValElem.innerHTML = quantityVal;
+}
