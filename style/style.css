@@ -905,7 +905,6 @@ border-radius: 15px;}
 .CountsWrapper .PlusBtn {width:50px; height:25px; display: flex;align-items: center;cursor: pointer;user-select: none;}
 .CountsWrapper .PlusBtn img {height: 12px;width:12px;margin: auto;}
 
-
 .AddToCartBtnWrapper {width: 400px;height: 50px;background-color: hsl(26, 100%, 55%);cursor: pointer;border-radius: 15px;color:white;
 margin-left: 50px;}
 .CartImgWrapper {width:50px; height:25px;}
@@ -926,141 +925,187 @@ margin-left: 50px;}
 
 
 
-  
-  .modal .row > .column {
-    padding: 0 8px;
-  }
-  
-  .modal .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  .modal .column {
-    float: left;
-    width: 25%;
-  }
-  
-  /* The Modal (background) */
-  .modal {
-    display: none;
+/* Styling for modal pop-up */  
+.modal .row > .column {
+padding: 0 8px;
+}
+
+.modal .row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.modal .column {
+float: left;
+width: 25%;
+}
+
+.modalOverlay
+{
     position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
+    display: none;
     top: 0;
+    left: 0;
+    background-color: black;
+    opacity: calc(0.8);
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: black;
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    width: 90%;
-    max-width: 500px;
-  }
-  
-  /* The Close Button */
-  .modal .close {
-    color: white;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 35px;
-    font-weight: bold;
-  }
-  
-  .modal .close:hover,
-  .modal .close:focus {
-    color: #999;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .mySlides {
-    display: none;
-  }
-  
-  .modal .cursor {
-    cursor: pointer;
-  }
-  
-  /* Next & previous buttons */
-  .modal .prev,
-  .modal .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -50px;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    -webkit-user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .modal .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .modal .prev:hover,
-  .modal .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  /* Number text (1/3 etc) */
-  .modal .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
-  
-  .modal img {
-    margin-bottom: -4px;
-  }
-  
-  .modal .caption-container {
-    text-align: center;
-    background-color: black;
-    padding: 2px 16px;
-    color: white;
-  }
-  
-  .modal .demo {
-    opacity: 0.6;
-  }
-  
-  .modal .active,
-  .modal .demo:hover {
-    opacity: 1;
-  }
-  
-  .modal img.hover-shadow {
-    transition: 0.3s;
-  }
-  
-  .modal .hover-shadow:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
+    z-index: 30;
+}
+
+/* The Modal (background) */
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+padding-top: 100px;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: transparent;
+z-index: 40;
+}
+
+/* Modal Content */
+.modal-content {
+position: relative;
+margin: auto;
+padding: 0;
+width: 90%;
+max-width: 500px;
+}
+
+/* The Close Button */
+.modal .close {
+color: white;
+position: absolute;
+top: 10px;
+right: 25px;
+font-size: 35px;
+font-weight: bold;
+}
+
+.modal .close:hover,
+.modal .close:focus {
+color: #999;
+text-decoration: none;
+cursor: pointer;
+}
+
+.mySlides {
+display: none;
+}
+
+.mySlides img
+{
+    border-radius: 15px;
+}
+
+.modal .cursor {
+cursor: pointer;
+}
+
+/* Next & previous buttons */
+.modal .prev,
+.modal .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+padding: 16px;
+margin-top: -80px;
+color: white;
+font-weight: bold;
+font-size: 20px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+-webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.modal .next {
+right: -25px;
+background-color: white;
+border-radius: 30px;
+height: 50px;
+width:50px;
+display: flex;
+align-items: center;
+}
+
+.modal .prev
+{
+background-color: white;
+border-radius: 30px;
+height: 50px;
+width:50px;
+display: flex;
+align-items: center;
+left:-25px;
+}
+
+.modal .prev img,
+.modal .next img
+{
+    margin:auto;
+}
+
+/* On hover, add a black background color with a little bit see-through 
+.modal .prev:hover,
+.modal .next:hover {
+background-color: rgba(0, 0, 0, 0.8);
+}
+*/
+
+/* Number text (1/3 etc) */
+.modal .numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+.modal img {
+margin-bottom: -4px;
+}
+
+.modal .caption-container {
+text-align: center;
+background-color: black;
+padding: 2px 16px;
+color: white;
+}
+
+.modal .demo {
+opacity: 0.6;
+}
+
+.modal .active,
+.modal .demo:hover {
+opacity: 1;
+}
+
+.modal img.hover-shadow {
+transition: 0.3s;
+}
+
+.modal .hover-shadow:hover {
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 
 
 
+  
+.ThumbnailContainer {display: flex; align-items: center;
+    justify-content:space-around;margin-top: 30px;}
+.thColumn { margin:auto;display: flex;align-items: center;}
+.thColumn img {width:80%; margin: auto;border-radius: 10px;}
 
 
 
