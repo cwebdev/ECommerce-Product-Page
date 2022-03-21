@@ -159,6 +159,11 @@ body
     font-size: 12px;
 }
 
+.productTotalInCart
+{
+    font-size:16px;
+}
+
 .productTotalTextWrapper
 {
     width:180px;
