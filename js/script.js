@@ -42,6 +42,7 @@ function showSlides(n) {
 let productPriceInCart = 125.00;
 let productQuantityInCart = 0;
 
+// Code for Add to Cart button
 let addToCartBtn = document.querySelector('.AddToCartBtnWrapper');
 addToCartBtn.onclick = function(e) {
   let quantityValElem = document.querySelector('.QuantityValue');
@@ -56,11 +57,7 @@ addToCartBtn.onclick = function(e) {
   }
 
   if(productQuantityInCart > 0)
-  {    
-    // Hide empty cart view
-    let emptyCartContent = document.querySelector('.emptyCartContent');
-    emptyCartContent.style.display = 'none';
-    
+  {   
     // Calculate and update new pricing
     let productQuantityInCartElem = document.querySelector('.productQuantityInCart');
     productQuantityInCartElem.innerHTML = productQuantityInCart;
@@ -69,20 +66,19 @@ addToCartBtn.onclick = function(e) {
     let productTotalInCart = document.querySelector('.productTotalInCart');
     productTotalInCart.innerHTML = "$" + productTotal.toFixed(2);
 
-    // Show cart details
-    let cartDetailsContent = document.querySelector('.cartDetailsContent');
-    cartDetailsContent.style.display = 'block';   
+    showCartDetails();      
   }
   else
   {
-    // Hide cart details
-    let cartDetailsContent = document.querySelector('.cartDetailsContent');
-    cartDetailsContent.style.display = 'none';
-
-    // Show empty cart view
-    let emptyCartContent = document.querySelector('.emptyCartContent');
-    emptyCartContent.style.display = 'block';
+    clearCartDetails();
   }  
+}
+
+// Code for clear cart button
+let clearCartBtn = document.querySelector('.removeProductWrapper');
+clearCartBtn.onclick = function(e) {
+  productQuantityInCart = 0;
+  clearCartDetails();
 }
 
 
@@ -97,7 +93,7 @@ cartImgBtn.onclick = function(e) {
 }
 
 
-// Code for cart quantity
+// Code for cart quantity number counter buttons
 let plusBtn = document.querySelector('.PlusBtn');
 plusBtn.onclick = function(e) {
   let quantityValElem = document.querySelector('.QuantityValue');
@@ -118,3 +114,25 @@ negBtn.onclick = function(e) {
 }
 
 
+// Reusable functions
+function showCartDetails()
+{
+  // Hide empty cart view
+  let emptyCartContent = document.querySelector('.emptyCartContent');
+  emptyCartContent.style.display = 'none';
+
+  // Show cart details
+  let cartDetailsContent = document.querySelector('.cartDetailsContent');
+  cartDetailsContent.style.display = 'block'; 
+}
+
+function clearCartDetails()
+{
+  // Hide cart details
+  let cartDetailsContent = document.querySelector('.cartDetailsContent');
+  cartDetailsContent.style.display = 'none';
+
+  // Show empty cart view
+  let emptyCartContent = document.querySelector('.emptyCartContent');
+  emptyCartContent.style.display = 'flex';
+}

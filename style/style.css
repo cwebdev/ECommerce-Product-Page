@@ -188,6 +188,7 @@ body
     align-items: center;
     width:50px;
     height: 60px;
+    cursor: pointer;
 }
 
 .removeProductWrapper img
