@@ -235,11 +235,28 @@ body
     align-items: center;
 }
 
-.cartImageElemWrapper img
+.cartIconWrapper
 {
     margin: auto;
     cursor: pointer;
+    position: relative;
 }
+
+.cartQuantityIcon
+{
+    position: absolute;
+    right:-8px;
+    top:-5px;
+    background-color: hsl(26, 100%, 55%);
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+    height: 12px;
+    font-size: 10px;
+    color: white;
+    display: none;
+}
+
 
 .profileBtnWrapper
 {
@@ -580,7 +597,7 @@ body
     background-position: center;
 }
 
-.artRow
+.productRow
 {
     position: relative;
     height: 850px;
@@ -1210,7 +1227,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     .sectionTitle{margin-top: 60px;font-size: 24px;}
 
-    .artRow {
+    .productRow {
         height:600px;
         margin-top: 100px;
     }
