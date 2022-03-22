@@ -612,9 +612,8 @@ body
     background-position: center;
     height: 600px;    
     background-color: #33334b; 
-    position: absolute;
-    padding-top:200px;   
-    top:175px;
+    padding-top:200px;  
+    
     z-index:0;
     border-top-right-radius:100px;
     border-bottom-left-radius: 100px;
@@ -1201,7 +1200,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     .mainNavMenuWrapper {display: flex;justify-content: space-evenly;margin-left:20px}
     .navMenuElem.collapsed .navDropDownMenu {display: block;}
 
-    .navMenuElem {font-size:18px;text-align: center;display: block;align-items:center;position: relative;
+    .navMenuElem {font-size:12px;text-align: center;display: block;align-items:center;position: relative;
     cursor: pointer;}
     .navMenuArrow {
         height: 15px;
@@ -1221,7 +1220,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         transform: rotate(180deg);
     }
 
-    .mainNavMenuWrapper .btnWrapper {width:100px;margin-left:20px}
+    .mainNavMenuWrapper .btnWrapper {width:50px;margin-left:20px}
     .navListWrapper {width:20%; display: flex; flex-wrap: nowrap;justify-content:right;}    
     .btnWrapper {display: flex;flex-direction: column;justify-content: center;}    
 
@@ -1232,7 +1231,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         margin-top: 100px;
     }
     
-    .ProductImageWrapper {width:50%;display: flex;flex-direction: column;height:600px;}
+    .ProductImageWrapper {width:100%;display: flex;flex-direction: column;height:600px;}
     
     .bigImgWrapper {height:450px;width:100%;}
     .bigImgElem {width:450px; margin: auto;height: 450px; }
@@ -1246,7 +1245,8 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
         
     .ImgThumbnailElem img {height: 100%;width: 100%;border-radius: 15px;}
-    .standoutTextBlockWrapper {width:100%;top:0px;right:0px; height:400px;padding-top:0px}
+    .standoutTextBlockWrapper {width:50%;top:0px;right:0px; height:600px;padding-top:0px;
+        margin:auto;margin-top:0px}
     .standoutTextBlockWrapper
     {
         background:none;
@@ -1254,6 +1254,12 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     .transformImageWrapper {background-image: url('../images/illustration-editor-desktop.svg');
         background-size: 80%;height:600px;background-position: 300px center;}
     .transformTextBlockWrapper {height: 600px;}
+
+    .textBlockWrapper {justify-content: flex-start;}
+    .textBlockWrapper .textBlock {width: 100%;}
+
+
+
     .laptopImageWrapper {background-image: url('../images/illustration-laptop-desktop.svg');
         background-size: cover;height:600px;background-position: -150px center;}
     .laptopTextBlockWrapper {height: 600px;justify-content:left;}
@@ -1284,4 +1290,10 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     {
         display: flex;
     }
+
+    .mainNavMenuWrapper .btnWrapper {width:80px;margin-left:20px}
+    .navMenuElem {font-size:18px}
+
+    .standoutTextBlockWrapper {padding-top: 0px; margin-top: 0px}
+    .textBlockWrapper .textBlock {width: 50%;}
   }
