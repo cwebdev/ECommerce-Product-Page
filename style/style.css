@@ -18,7 +18,7 @@ body
 
 .headingWrapper
 {
-    width:80%;
+    width:100%;
     display: flex;
     margin:auto;
 }
@@ -41,12 +41,6 @@ body
 .profileAndCartWrapper
 {
     display: flex;
-}
-
-.menuCartBtnWrapper
-{
-    width: 100px;
-    height: 100px;
 }
 
 .cartDetailsPopup
@@ -294,8 +288,8 @@ body
 {
     height:35px;
     width:35px;
-    background-image: url('../images/icon-hamburger.svg');    
-    background-size: 100%;
+    background-image: url('../images/icon-menu.svg');    
+    background-size: 80%;
     background-repeat: no-repeat;
     margin: auto;
     cursor: pointer;
@@ -304,6 +298,36 @@ body
 .burgerIcon.collapsed
 {
     background-image: url('../images/icon-close.svg');   
+}
+
+.mobileMenu
+{
+    position: fixed;
+    width:200px;
+    height:100%;
+    background-color: white;
+    z-index: 100;
+    display: none;
+}
+
+.mobileMenuWrapper
+{
+    width:80%;
+    margin: auto;
+    height: auto;
+}
+
+.mobileCloseBtnWrapper
+{
+    height: 50px;
+    width: 100%;
+    margin-top:20px;
+    cursor: pointer;
+}
+
+.mobileMenuElem
+{
+    height: 40px;
 }
 
 .dropdownMenuWrapper
@@ -376,11 +400,6 @@ body
 {
     padding-top:10px;
     padding-bottom: 7px;
-}
-
-.navListWrapper
-{
-    display: none;
 }
 
 .mainTitle
@@ -535,11 +554,6 @@ body
     margin-bottom: 40px;
     color:hsl(212, 27%, 19%);
     font-weight:600;
-}
-
-.textBlock p
-{
-    
 }
 
 .textBlockDetails
@@ -1168,7 +1182,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 .textBlock p {text-align: left;font-size:18px;
     line-height: 30px;
 }
-
+.menuCartBtnWrapper {width:70px;height: 100px;}
 
 
 
@@ -1189,8 +1203,10 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     .col-s-11 {width: 91.66%;}
     .col-s-12 {width: 100%;}
 
+    .headingWrapper {width:80%;}
     .burgerIconWrapper {display: none;}
-    
+    .mobileMenu {display: none;}
+    .menuCartBtnWrapper {width:100px;}
     .bigTextBlockWrapper {height: 500px;}
     .textBlockWrapper {height:500px;}
     .textBlock {margin-bottom: 0px;width: 50%;padding-left: 0px;}
