@@ -1,3 +1,6 @@
+//////////////////
+// Code for Modal
+//////////////////
 function openModal() {
   document.getElementById("myModal").style.display = "block";
   document.querySelector(".modalOverlay").style.display = "block";
@@ -126,7 +129,26 @@ negBtn.onclick = function(e) {
 }
 
 
+////////////////////////
+// Code for mobile menu
+////////////////////////
+let burgerIcon = document.querySelector('.burgerIcon');
+burgerIcon.onclick = function(e) {
+  let mobileMenu = document.querySelector('.mobileMenu');
+  mobileMenu.style.display = 'block';
+}
+
+let closeMobileMenuBtn = document.querySelector('.closeMobileMenuBtn');
+closeMobileMenuBtn.onclick = function(e) {
+  let mobileMenu = document.querySelector('.mobileMenu');
+  mobileMenu.style.display = 'none';
+}
+
+
+
+//////////////////////
 // Reusable functions
+//////////////////////
 function showCartDetails()
 {
   // Hide empty cart view
