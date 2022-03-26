@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="Author: Chitrang Shah, An E-commerce product page with functionalities
+  to see product images and add product to cart.">
   <title>E-commerce product page</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,8 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/style.css">     
 </head>
-
-
 <body>
   <div class="mainWrapper row">
     <div class="headingWrapper">
@@ -79,7 +79,7 @@
               <div class="cartDetailsContent">
                 <div class="productDetailsInCart">
                   <div class="productThumbnailInCart">
-                    <img src="images/image-product-1-thumbnail.jpg" />
+                    <img src="images/image-product-1-thumbnail.jpg" alt="shoes thumbnail 1" />
                   </div>
                   <div class="productDetailsWrapper">
                     <div class="productDetailsTextWrapper">
@@ -96,7 +96,7 @@
                     </div>
                   </div>
                   <div class="removeProductWrapper">
-                    <img src="images/icon-delete.svg"/>
+                    <img src="images/icon-delete.svg" alt="delete icon"/>
                   </div>
                 </div>
                 <div class="checkoutBtnWrapper">
@@ -108,7 +108,7 @@
             </div>
           </div>
           <div class="profileBtnWrapper">
-            <img src="images/image-avatar.png"/>
+            <img src="images/image-avatar.png" alt="profile avatar icon"/>
           </div>
         </div>
       </div>
@@ -143,25 +143,25 @@
     <div class="imageWrapper ProductImageWrapper col-6">
       <div class="bigImgWrapper">
         <div class="bigImgElem">
-          <img src="images/image-product-1.jpg" />
+          <img src="images/image-product-1.jpg" alt="product big image"/>
         </div>
       </div>
       <div class="ImgThumbnailsWrapper">
         <div class="ImgThumbnailElem selectedElem">
           <div class="overlay" onclick="openModal();currentSlide(1)"></div>
-          <img src="images/image-product-1-thumbnail.jpg"/>
+          <img src="images/image-product-1-thumbnail.jpg" alt="product thumbnail image 1"/>
         </div>
         <div class="ImgThumbnailElem">
           <div class="overlay" onclick="openModal();currentSlide(2)" ></div>
-          <img src="images/image-product-2-thumbnail.jpg"/>
+          <img src="images/image-product-2-thumbnail.jpg" alt="product thumbnail image 2"/>
         </div>
         <div class="ImgThumbnailElem">
           <div class="overlay" onclick="openModal();currentSlide(3)"></div>
-          <img src="images/image-product-3-thumbnail.jpg"/>
+          <img src="images/image-product-3-thumbnail.jpg" alt="product thumbnail image 3"/>
         </div>
         <div class="ImgThumbnailElem">
           <div class="overlay" onclick="openModal();currentSlide(4)"></div>
-          <img src="images/image-product-4-thumbnail.jpg"/>
+          <img src="images/image-product-4-thumbnail.jpg" alt="product thumbnail image 4"/>
         </div>
       </div>
     </div>
@@ -184,17 +184,17 @@
         </div>
         <div class="ProdBtnsWrapper">
           <div class="CountsWrapper">
-            <div class="NegBtn"><img src="images/icon-minus.svg"/> </div>
+            <div class="NegBtn"><img src="images/icon-minus.svg" alt="minus icon"/> </div>
             <div class="QuantityWrapper">
               <div class="QuantityValue">0</div>
             </div>
-            <div class="PlusBtn"><img src="images/icon-plus.svg"/></div>
+            <div class="PlusBtn"><img src="images/icon-plus.svg" alt="plus icon"/></div>
             
           </div>
           <div class="AddToCartBtnWrapper">
             <div class="AddToCartBtn">
               <div class="CartImgWrapper">
-                <img src="images/icon-cart.svg" class="filter-white"/>
+                <img src="images/icon-cart.svg" class="filter-white" alt="cart icon"/>
               </div>
               <div class="AddToCartBtnText">Add to cart</div>
             </div>
@@ -212,40 +212,40 @@
     <div class="modal-content">
   
       <div class="mySlides">
-        <img src="images/image-product-1.jpg" style="width:100%">
+        <img src="images/image-product-1.jpg" alt="product slide image 1" style="width:100%">
       </div>
   
       <div class="mySlides">
-        <img src="images/image-product-2.jpg" style="width:100%">
+        <img src="images/image-product-2.jpg" alt="product slide image 2" style="width:100%">
       </div>
   
       <div class="mySlides">
-        <img src="images/image-product-3.jpg" style="width:100%">
+        <img src="images/image-product-3.jpg" alt="product slide image 3" style="width:100%">
       </div>
       
       <div class="mySlides">
-        <img src="images/image-product-4.jpg" style="width:100%">
+        <img src="images/image-product-4.jpg" alt="product slide image 4" style="width:100%">
       </div>
       
       <a class="prev" onclick="plusSlides(-1)">
-        <img src="images/icon-previous.svg"/>
+        <img src="images/icon-previous.svg" alt="previous icon"/>
       </a>
       <a class="next" onclick="plusSlides(1)">
-        <img src="images/icon-next.svg"/>
+        <img src="images/icon-next.svg" alt="next icon"/>
       </a>
   
       <div class="ThumbnailContainer">
         <div class="thColumn">
-          <img class="demo cursor" src="images/image-product-1.jpg" onclick="currentSlide(1)" alt="Nature and sunrise">
+          <img class="demo cursor" src="images/image-product-1.jpg" alt="product thumbnail 1"  onclick="currentSlide(1)" alt="Nature and sunrise">
         </div>
         <div class="thColumn">
-          <img class="demo cursor" src="images/image-product-2.jpg" onclick="currentSlide(2)" alt="Snow">
+          <img class="demo cursor" src="images/image-product-2.jpg" alt="product thumbnail 2" onclick="currentSlide(2)" alt="Snow">
         </div>
         <div class="thColumn">
-          <img class="demo cursor" src="images/image-product-3.jpg" onclick="currentSlide(3)" alt="Mountains and fjords">
+          <img class="demo cursor" src="images/image-product-3.jpg" alt="product thumbnail 3" onclick="currentSlide(3)" alt="Mountains and fjords">
         </div>
         <div class="thColumn">
-          <img class="demo cursor" src="images/image-product-4.jpg" onclick="currentSlide(4)" alt="Northern Lights">
+          <img class="demo cursor" src="images/image-product-4.jpg" alt="product thumbnail 4" onclick="currentSlide(4)" alt="Northern Lights">
         </div>
       </div>
     </div>

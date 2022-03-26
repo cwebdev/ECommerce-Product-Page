@@ -25,7 +25,11 @@ This E-commerce product page of sneakers is developed in HTML5, CSS3 and JavaScr
 
 ### Desktop Screenshot
 
+![](./Desktop_Screenshot.png)
+
 #### Mobile Screenshot
+
+![](./Mobile_Screenshot.png)
 
 ### Links
 
